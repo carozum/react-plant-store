@@ -1,0 +1,14 @@
+.lmj-cart{
+	padding: 32px;
+	color: white;
+	background-color: #31b572;
+}
+.cart-container{
+    margin-right: 0;
+    margin-left: auto;
+    width: 300px
+}
+.cart-container ul{
+    margin: 0;
+    padding-left: 13px;
+}
