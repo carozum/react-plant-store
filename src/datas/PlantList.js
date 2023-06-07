@@ -1,4 +1,12 @@
-import cover from "../assets/monstera.jpg";
+import monstera from '../assets/monstera.jpg'
+import lyrata from '../assets/lyrata.jpg'
+import pothos from '../assets/pothos.jpg'
+import succulent from '../assets/succulent.jpg'
+import olivier from '../assets/olivier.jpg'
+import basil from '../assets/basil.jpg'
+import mint from '../assets/mint.jpg'
+import calathea from '../assets/calathea.jpg'
+import cactus from '../assets/cactus.jpg'
 
 const plantList = [
 	{
@@ -8,7 +16,8 @@ const plantList = [
         isBestSale: true,
         light:2,
         water:3,
-		cover: cover
+		cover: monstera,
+		price: 15
 	},
 	{
 		name: 'ficus lyrata',
@@ -17,7 +26,8 @@ const plantList = [
         isBestSale: false,
         light:3,
         water:1,
-		cover: cover
+		cover: lyrata,
+		price: 16
 	},
 	{
 		name: 'pothos argenté',
@@ -27,16 +37,18 @@ const plantList = [
         isSpecialOffer: true,
         light:1,
         water:2,
-		cover: cover
+		cover: pothos,
+		price: 9
 	},
 	{
-		name: 'yucca',
+		name: 'calathea',
 		category: 'classique',
 		id: '4kk',
         isBestSale: true,
-        light:3,
-        water:1,
-		cover: cover
+        light:2,
+        water:3,
+		cover: calathea,
+		price: 20
 	},
 	{
 		name: 'olivier',
@@ -45,16 +57,19 @@ const plantList = [
         isBestSale: false,
         light:3,
         water:1,
-		cover: cover
+		cover: olivier,
+		price: 25
 	},
 	{
-		name: 'géranium',
-		category: 'extérieur',
-		id: '6uo',
-        isBestSale: true,
+		name: 'cactus',
+		category: 'plante grasse',
+		id: '8fp',
+        isBestSale: false,
+		isSpecialOffer: true,
         light: 2,
-        water: 2,
-		cover: cover
+        water: 1,
+		cover: cactus,
+		price: 6
 	},
 	{
 		name: 'basilique',
@@ -64,17 +79,8 @@ const plantList = [
         isSpecialOffer: true,
         light:2,
         water:2,
-		cover: cover
-	},
-	{
-		name: 'aloe',
-		category: 'plante grasse',
-		id: '8fp',
-        isBestSale: false,
-        isSpecialOffer: true,
-        light:2,
-        water:1,
-		cover: cover
+		cover: basil,
+		price: 5
 	},
 	{
 		name: 'succulente',
@@ -83,8 +89,19 @@ const plantList = [
         isBestSale: false,
         light:2,
         water:1,
-		cover: cover
-	}
+		cover: succulent,
+		price: 8
+	},
+	{
+		name: 'menthe',
+		category: 'extérieur',
+		id: '6uo',
+        isBestSale: true,
+        light:2,
+        water:2,
+		cover: mint,
+		price: 4
+	},
 ]
 
 export default plantList;

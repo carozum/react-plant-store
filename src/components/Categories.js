@@ -1,5 +1,4 @@
 import plantList from "../datas/PlantList";
-import "../styles/CatList.css"
 
 function CatList(){
     // const categories = plantList.map(plant => (plant.category));
@@ -22,8 +21,8 @@ function CatList(){
     // the concat method is used to merge 2 or more arrays. 
 
     return (
-        <section className="cat-container">
-            <h2>Liste des catégories</h2>
+        <section >
+            {/* <h2>Liste des catégories</h2> */}
             <ul>
                 {singleCategories.map((cat) =>
                     <li key={cat}>

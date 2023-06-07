@@ -11,17 +11,19 @@ function Footer(){
     }
 
     return(
-        <div className='container-footer'>
-            <form className='footer-form'>
-                <input 
+        <footer className='lmj-footer'>
+            <div className='lmj-footer-elem'>
+				Pour les passionné·e·s de plantes 🌿🌱🌵
+			</div>
+			<div className='lmj-footer-elem'>Laissez-nous votre mail :</div>
+            <input 
                     value={userInput}
                     onChange={(e)=>(setUserInput(e.target.value))}
                     onBlur={()=>(checkValue(userInput))} />
                 <button 
                       onClick={()=> alert(`Vous êtes abonné avec l'adresse: ${userInput}`)}
                 >Je m'abonne à la newsletter</button>
-            </form>
-        </div>
+        </footer>
     );
 }
 export default Footer;

@@ -1,7 +1,8 @@
 .lmj-plant-item-cover {
-	height: 220px;
-	width: 220px;
+	height: 250px;
+	width: 250px;
 	border-radius: 20px;
+	object-fit: cover;
 }
 
 .lmj-plant-item {
@@ -14,9 +15,10 @@
 	flex-direction: column;
 	text-transform: capitalize;
 
-    border: solid 2px #F3F3F3;
-	border-radius: 10px;
+    /* border: solid 2px #F3F3F3;
+	border-radius: 10px; */
 
 	position: relative; 
     /* pour positionner le mot solde */
 }
+

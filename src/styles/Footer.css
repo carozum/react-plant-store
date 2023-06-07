@@ -1,19 +1,14 @@
-
-.container-footer{
-    background-color:aquamarine;
-    color: white;
-    padding: 20px 0 30px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.lmj-footer {
+	color: black;
+	padding: 32px;
+	border-top: solid 3px black;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	font-weight: 500;
 }
-.footer-form input{
-    min-width: 250px;
-    display: block;
-}
-.footer-form button{
-    margin-top: 20px;
-    min-width: 250px;
-    display: block;
 
+.lmj-footer-elem {
+	margin-bottom: 10px;
 }
