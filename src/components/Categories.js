@@ -1,37 +1,31 @@
-import plantList from "../datas/PlantList";
 
-function CatList(){
-    // const categories = plantList.map(plant => (plant.category));
-    // const singleCategories = [];
-    // categories.forEach (cat => {
-    //     if (! singleCategories.includes(cat)){
-    //         singleCategories.push(cat);
-    //     }});
+import '../styles/Categories.css';
 
-    const singleCategories = plantList.reduce(
-        // acc is the accumulated result and is initialized to an empty array
-        // reduce() is a method on arrays that take as first parameter a function to update the acc result (here acc) with the current value (here plant) and optional an initial value for the acc result
-        (acc, plant) =>
-            // on utilise un ternaire
-            acc.includes(plant.category) 
-            ? acc 
-            : acc.concat(plant.category),
-        []
-    )
-    // the concat method is used to merge 2 or more arrays. 
+function Categories({activeCategory, setActiveCategory, categories}){
 
     return (
-        <section >
-            {/* <h2>Liste des catégories</h2> */}
-            <ul>
-                {singleCategories.map((cat) =>
-                    <li key={cat}>
+        <section  className="lmj-categories">
+            <h2>Choisissez une catégorie</h2> 
+            <select 
+                value={activeCategory}
+                onChange={(e)=>setActiveCategory(e.target.value)}
+                className="lmj-categories-select"
+            >
+                <option value="all">Toutes les catégories</option>
+                {categories.map((cat) =>
+                    <option 
+                        key={cat}
+                        value ={cat}>
                         {cat}
-                    </li>)}
-            </ul>
+                    </option>)}
+            </select>
+            <div className="lmj-categories-button">
+                <button onClick={()=> setActiveCategory('All')}>Réinitialiser les catégories</button>
+            </div>
+            
         </section>
         
     );
 }
 
-export default CatList;
+export default Categories;

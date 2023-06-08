@@ -1,8 +1,13 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import  '../styles/Footer.css';
 
-function Footer(){
+function Footer({cart}){
     const [userInput, setUserInput] = useState("Votre email");
+    
+    useEffect(()=>{
+        return () => 
+            console.log("un composant a disparu")
+    })
 
     function checkValue(input){
         if (!input.includes("@")){
@@ -23,6 +28,7 @@ function Footer(){
                 <button 
                       onClick={()=> alert(`Vous êtes abonné avec l'adresse: ${userInput}`)}
                 >Je m'abonne à la newsletter</button>
+                
         </footer>
     );
 }

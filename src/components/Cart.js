@@ -1,5 +1,5 @@
 import '../styles/Cart.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Cart({cart, updateCart}) {
 	
@@ -9,6 +9,11 @@ function Cart({cart, updateCart}) {
 		(acc, plant) => acc + plant.amount * plant.price,
 		0
 	);
+
+	useEffect(() => {
+		document.title = `${total}€ à payer 💸`},
+		[total])
+
 
 	return isOpen 
 		? (
@@ -46,7 +51,7 @@ function Cart({cart, updateCart}) {
 				<button 
 					className='lmj-cart-toggle-button'
 					onClick={()=>setIsOpen(true)}
-				>Ouvrir le panier</button>
+				>Voir le panier</button>
 			</div>
 		)
 	

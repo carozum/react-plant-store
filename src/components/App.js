@@ -6,11 +6,18 @@ import logo from '../assets/leaf.png' ;
 // import QuestionForm2 from './QuestionForm2';
 import Footer from './Footer';
 import '../styles/Layout.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
 	const title = 'La maison jungle';
-	const [cart, updateCart] = useState([]);
+	
+	const [isFooterShown, updateIsFooterShown]=useState(true);
+
+	const savedCart = localStorage.getItem('cart');
+	const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : []);
+	useEffect(()=>{
+		localStorage.setItem('cart', JSON.stringify(cart))
+	}, [cart])
 	return (
 		<div>
 			<Banner>
@@ -29,12 +36,16 @@ function App() {
 				{/* <QuestionForm />
 				<QuestionForm2 /> */}
 			</div>
-			<Footer />
+			<button onClick={()=>updateIsFooterShown(!isFooterShown)}>Cacher !</button>
+			{isFooterShown && <Footer cart={cart} />}
+			
 		</div>
 	)
 }
 
 export default App
+
+
 
 
 

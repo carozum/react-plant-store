@@ -4,7 +4,7 @@ import '../styles/PlantItem.css';
 
 
 
-function PlantItem({name, isBestSale, isSpecialOffer, cover, id, light, water}){
+function PlantItem({name, isBestSale, isSpecialOffer, cover, id, light, water, price, category}){
 
     function handleClick(e, name) {
         console.log(`✨ Bravo pour le choix de ce ${name} ✨`);
